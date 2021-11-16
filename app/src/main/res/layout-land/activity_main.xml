@@ -8,10 +8,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="345dp"
+        android:layout_width="600dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="35dp"
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,8 @@
             android:inputType="numberSigned"
             android:minHeight="48dp"
             android:textColor="@android:color/background_dark"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            tools:text="0" />
 
         <TextView
             android:id="@+id/operation"
@@ -46,7 +47,8 @@
             android:background="@android:color/background_light"
             android:inputType="numberSigned"
             android:textColor="@android:color/background_dark"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            tools:text="0" />
 
         <TextView
             android:id="@+id/equal"
@@ -63,20 +65,19 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="0
-"
+            android:text="0"
             android:textColor="@android:color/background_dark"
             android:textSize="30sp" />
     </LinearLayout>
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="350dp"
+        android:layout_width="600dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="35dp"
         android:visibility="visible"
-        app:columnCount="3"
+        app:columnCount="6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -101,7 +102,8 @@
             android:onClick="onClick"
             android:text="-"
             android:textSize="30sp"
-            app:layout_gravity="fill_vertical" />
+            app:layout_gravity="fill_vertical"
+            app:layout_rowSpan="2" />
 
         <Button
             android:id="@+id/buttonDivide"
@@ -112,7 +114,7 @@
             android:onClick="onClick"
             android:text="/"
             android:textSize="30sp"
-            app:layout_columnSpan="1"
+            app:layout_columnSpan="2"
             app:layout_gravity="fill_horizontal" />
 
         <Button
@@ -123,7 +125,9 @@
             android:backgroundTint="@color/material_on_surface_emphasis_medium"
             android:onClick="onClick"
             android:text="^"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            app:layout_columnSpan="2"
+            app:layout_gravity="fill_horizontal"  />
 
         <Button
             android:id="@+id/buttonMultiply"
@@ -134,7 +138,7 @@
             android:onClick="onClick"
             android:text="*"
             android:textSize="30sp"
-            app:layout_columnSpan="1"
+            app:layout_columnSpan="3"
             app:layout_gravity="fill_horizontal" />
 
         <Button
@@ -146,8 +150,8 @@
             android:onClick="onClick"
             android:text="C"
             android:textSize="30sp"
-            app:layout_columnSpan="3"
-            app:layout_gravity="fill_horizontal" />
+            app:layout_gravity="fill_vertical"
+            app:layout_rowSpan="2" />
 
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
